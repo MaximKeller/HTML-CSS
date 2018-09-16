@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html>
+       <head>
+<style>
+#Progress_Bar_Status{                 
+                         width: 49%; 
+                         background-color: #ddd; 
+ }
+ #Progress{
+                        width: 2%;
+                        height: 23px;
+                        background-color: blue; 
+ }      
+</style>
+       </head>
+     <body>
+
+<h4>My Progress Bar is now ready</h4>
+<h2>Downloading Status</h2>
+
+<div id="Progress_Bar_Status">
+<div id="Progress"></div>
+</div>
+<br>
+<button onclick="status()">Start Downloading</button>
+<script>
+          function status(){
+                    var element = document.getElementById("Progress");
+                    var width = 1;
+                    var identity = setInterval(scene, 10);
+          function scene(){
+                       if(width >= 100){
+                                   clearInterval(identity);
+}                    else{
+                                      width++;
+element.style.width = width + '%' ;
+        }
+    }
+}
+        </script>
+   </body>
+</html>
